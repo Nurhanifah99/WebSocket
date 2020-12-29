@@ -1,0 +1,41 @@
+pengujian fungsional yaitu pengujian perangkat lunak yang berdasarkan pada kebutuhan dan spesifikasi kebutuhan fungsional yang telah di lakukan pada tahap analisis kebutuhan sebelumnnya 
+
+tujuan , untuk mengetahui apakah program yang di buat oleh programmer telah berfungsi sesuai yang di harapkan pada kebutuhan yang telah di spesifikasi sebelumnya 
+
+pengujian fungsional dilakukan dengan teknik yang namanya Black Box
+
+teknik black box adalah suatu teknik untuk menguji perangkat lunak yang mana pengujiannya tidak konsent atau fokus pada strutur internal atau kode program di dalam program tersebut melainkan berfokus untuk memberikan inputan kemudian memperhatikan outputnya bagimana . 
+mengapa ? karena kebutuhan fungsional berfokus kepada apakah outpunya sesuai dengan apa yang telah di spesifikasi 
+
+
+Pengujian software mengenai layanan yang harus diberikan oleh sistem tentang bagaimana sistem berinteraksi terhadap input, dan bagaimana sistem seharusnya berperilaku dalam suatu kondisi atau situasi tertentu. Pengujian ini berdasarkan pada detail prosedur dan alur logika kode program. Pada kegiatan ini, tester melihat source code program dan menemukan bugs dari kode program yang diuji. Intinya adalah pengujian yang dilakukan sampai kepada detail pengecekan kode program
+
+yang dibutuhkan : 
+1. inputan data contoh : [a..Z -5,0,999, $#@!, jpeg, png, dsc]
+2. periksa atau di evalusi hasil yang keluar atau Expected result atau output yang di keluarkan 
+[success, error, failed, Empty]
+
+FUNGSIONAL(tanpa mengetahui source program)
+kebutuhan fungsional di program ini berkaitan dengan Verivikasi dan validasi 
+Verifikasi apakah sistem sudah sesuai dengan spesifikasi yang di bangaun
+Validasi sistem yang di bangun sesuai dengan keiginan klient 
+
+smoke :
+jadi gunanya untuk memeriksa apakah fungsionalitas krisis itu berfungsi dengan baik untuk melakukan pengujian extentif lebih lanjut
+
+Saniti:
+yang merupakan pengujian dimana fungsionalitas tertentu atau bag di perbaiki dan diuji untuk memeriksa apakah fungsionalitas berfungsi baik dan juga melihat dari apakah ada masalah atau tidak dalam perubahan waktu pengujian tersebut  
+
+
+NON FUNGSIONAL
+terdapat 
+1. menggunakan bhs indonesia
+2. aplikasi berbasis web 
+3. tidak membutuhkan memori yang terlalu besar 
+4. menggunakan pemrograman bahasa java
+
+
+di dalam pengujian fungsional : alfa testing white box , unit test 
+melihat loke logika yang di buat tim defoloper
+
+white box testing

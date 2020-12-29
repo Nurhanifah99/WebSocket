@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket Thing2</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card text-white" style="margin: 50px; background-color: hotpink;">
+        <div class="card-header">
+            <h2>Server</h2>
+        </div>
+        <div class="card-body">
+            <textarea id="txtFile2" style="width: 400px;height: 200px;"></textarea><br><br>
+            <button class="btn btn-light" onclick="btnListen()" style="margin-top: -30px;">Listen</button><br>
+            <img src="https://fontmeme.com/permalink/201229/6ff9338fde5d35c016f2bbde736bab2b.png" alt="blackpink-font" border="0" style="width: 500px; margin-top:100px;">
+        </div>
+    </div>
+</body>
+<script>
+    // Create WebSocket connection.
+    const socket = new WebSocket('ws://localhost:3000');
+
+    // Connection opened
+    socket.addEventListener('open', function (event) {
+        console.log('Connected to WS Server')
+    });
+
+    // Listen for messages
+    socket.addEventListener('message', function (event) {
+        console.log('Message from server '+ event.data);
+        document.getElementById('txtFile2').value = event.data;
+    });
+
+    socket.onmessage = function (event) {
+        console.debug("WebSocket message received:", event);
+    }
+
+    const sendMessage = ('message', function(event) {
+        document.getElementById('txtFile').value = event.data;
+    });
+
+    const btnListen = () => {
+        window.location.reload();
+    }
+</script>
+</html>

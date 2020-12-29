@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Socket Thing1</title>
+</head>
+<body>
+    <div class="card text-white" style="margin: 50px; background-color: hotpink;">
+        <div class="card-header">
+            <h2>Client</h2>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="/" enctype="multipart/form-data">
+                <input type="file" id="fileUploadku" name="file"/><br><br>
+                <input class="btn btn-light" type="submit" value="Upload"/><br>
+                <img class="mx-auto" src="https://fontmeme.com/permalink/201229/6ff9338fde5d35c016f2bbde736bab2b.png" alt="blackpink-font" border="0" style="width: 500px; margin-top:100px;">
+            </form>
+        </div>
+    </div>
+    <!-- <button onclick="sendMessage()">Send Msg</button> -->
+</body>
+<script>
+
+    // Create WebSocket connection.
+    const socket = new WebSocket('ws://localhost:3000');
+
+    // Connection opened
+    socket.addEventListener('open', function (event) {
+        console.log('Connected to WS Server')
+    });
+
+    // Listen for messages
+    socket.addEventListener('message', function (event) {
+        console.log('Message from server ', event.data);
+    });
+
+    const sendMessage = (req, res) => {
+        socket.send('Hello From Client1!');
+    }
+
+
+</script>
+</html>
